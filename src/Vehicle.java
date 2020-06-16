@@ -1,9 +1,9 @@
 import java.util.List;
 
 public abstract class Vehicle {
-    double speed;
-    double cratersCrossTime;
-    List<Weather> weathers;
+    private double speed;
+    private double cratersCrossTime;
+    private List<Weather> weathers;
 
     public Vehicle(double speed, double cratersCrossTime, List<Weather> weathers) {
         this.speed = speed;

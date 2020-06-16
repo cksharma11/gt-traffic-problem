@@ -1,6 +1,6 @@
 public class Orbit {
-    double distance;
-    int numberOfCreators;
+    private double distance;
+    private int numberOfCreators;
 
     public Orbit(double distance, int numberOfCreators) {
         this.distance = distance;

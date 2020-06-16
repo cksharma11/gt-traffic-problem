@@ -3,7 +3,7 @@ public class Weather {
     public static Weather WINDY = new Weather(0);
     public static Weather RAINY = new Weather(20);
 
-    double craterReducePercentage;
+    private double craterReducePercentage;
     private Weather(double craterReducePercentage) {
         this.craterReducePercentage = craterReducePercentage;
     }
