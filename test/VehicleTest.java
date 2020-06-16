@@ -6,35 +6,44 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.*;
 
 class MockVehicle extends Vehicle {
-    public MockVehicle(double speed, double creatorCrossTime, List<Weather> supportedWeathers) {
-        super(speed, creatorCrossTime, supportedWeathers);
+    public MockVehicle(double speed, double creatorCrossTime, List<WeatherType> supportedWeatherTypes) {
+        super(speed, creatorCrossTime, supportedWeatherTypes);
     }
 }
 
 class VehicleTest {
     @Test
     void ShouldReturnTrueIfCanTravelInWeather() {
-        List<Weather> weathers = Arrays.asList(Weather.WINDY, Weather.SUNNY);
-        MockVehicle mockVehicle = new MockVehicle(20, 3, weathers);
+        List<WeatherType> weatherTypes = Arrays.asList(WeatherType.WINDY, WeatherType.SUNNY);
+        MockVehicle mockVehicle = new MockVehicle(20, 3, weatherTypes);
 
-        assertTrue(mockVehicle.canTravelIn(Weather.WINDY));
-        assertTrue(mockVehicle.canTravelIn(Weather.SUNNY));
+        assertTrue(mockVehicle.canTravelIn(WeatherType.WINDY));
+        assertTrue(mockVehicle.canTravelIn(WeatherType.SUNNY));
     }
 
     @Test
     void ShouldReturnFalseIfCannotTravelInWeather() {
-        List<Weather> weathers = Arrays.asList(Weather.WINDY, Weather.SUNNY);
-        MockVehicle mockVehicle = new MockVehicle(20, 3, weathers);
+        List<WeatherType> weatherTypes = Arrays.asList(WeatherType.WINDY, WeatherType.SUNNY);
+        MockVehicle mockVehicle = new MockVehicle(20, 3, weatherTypes);
 
-        assertFalse(mockVehicle.canTravelIn(Weather.RAINY));
+        assertFalse(mockVehicle.canTravelIn(WeatherType.RAINY));
     }
 
     @Test
     void shouldReturnTimeItWillTakeToCrossNNumbersCreators() {
-        List<Weather> weathers = Arrays.asList(Weather.WINDY, Weather.SUNNY, Weather.RAINY);
-        MockVehicle mockVehicle = new MockVehicle(20, 3, weathers);
+        List<WeatherType> weatherTypes = Arrays.asList(WeatherType.WINDY, WeatherType.SUNNY, WeatherType.RAINY);
+        MockVehicle mockVehicle = new MockVehicle(20, 3, weatherTypes);
 
-        assertEquals(3, mockVehicle.calculateCreatorCrossTime(1));
-        assertEquals(6, mockVehicle.calculateCreatorCrossTime(2));
+        assertEquals(3, mockVehicle.calculateCratersCrossTime(1));
+        assertEquals(6, mockVehicle.calculateCratersCrossTime(2));
+    }
+
+    @Test
+    void shouldReturnMaxSpeedCanTravelGivenOrbitsSpeedLimit() {
+        List<WeatherType> weatherTypes = Arrays.asList(WeatherType.WINDY, WeatherType.SUNNY, WeatherType.RAINY);
+        MockVehicle mockVehicle = new MockVehicle(20, 3, weatherTypes);
+
+        assertEquals(20, mockVehicle.maxTravelSpeed(25));
+        assertEquals(12, mockVehicle.maxTravelSpeed(12));
     }
 }
