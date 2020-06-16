@@ -46,4 +46,16 @@ class VehicleTest {
         assertEquals(20, mockVehicle.maxTravelSpeed(25));
         assertEquals(12, mockVehicle.maxTravelSpeed(12));
     }
+
+    @Test
+    void shouldReturnTimeTakenToTravelToOrbitInHours() {
+        List<Weather> weatherTypes = Arrays.asList(Weather.WINDY, Weather.SUNNY, Weather.RAINY);
+        MockVehicle mockVehicle = new MockVehicle(20, 3, weatherTypes);
+
+        Orbit orbit = new Orbit(20, 1, 40);
+        Weather sunny = Weather.SUNNY;
+
+        double result = mockVehicle.calculateTotalTravelTime(orbit,sunny);
+        assertEquals(1.045, result);
+    }
 }

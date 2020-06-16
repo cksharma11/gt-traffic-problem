@@ -22,4 +22,23 @@ public abstract class Vehicle {
     public double maxTravelSpeed(double speedLimit) {
         return Math.min(this.speed, speedLimit);
     }
+
+    private double getCratersTime(double count) {
+        double minutes =  count * this.cratersCrossTime;
+        return minutes / 60;
+    }
+
+    private double getTravelTime(double distance, double speed) {
+        return distance / speed;
+    }
+
+    public double calculateTotalTravelTime(Orbit orbit, Weather weather) {
+        double craterCount = weather.reducedCraterCount(orbit.getNumberOfCreators());
+        double travelSpeed = this.maxTravelSpeed(orbit.getSpeedLimit());
+
+        double cratersTime = this.getCratersTime(craterCount);
+        double travelTime = this.getTravelTime(orbit.getDistance(), travelSpeed);
+
+        return cratersTime + travelTime;
+    }
 }
