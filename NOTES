@@ -1,0 +1,53 @@
+Orbit options:
+Orbit 1 - 18 mega miles & 20 craters to cross
+Orbit 2 - 20 mega miles & 10 craters to cross
+
+Vehicle options:
+Bike -   10 megamiles/hour  & takes 2 min to cross 1 crater & Can travel when : sunny/windy
+Tuktuk - 12 mm/hour         & takes 1 min to cross 1 crater & Can travel when : sunny/rainy
+Car -    20 mm/hour         & takes 3 min to cross 1 crater & Can travel when : sunny/rainy/windy
+
+Weather conditions (affects the number of craters in an orbit):
+Sunny - craters reduce by 10%. Car, bike and tuktuk can be used in this weather.
+Rainy - craters increase by 20%. Car and tuktuk can be used in this weather.
+Windy - no change to number of craters. Car and bike can be used in this weather.
+
+- RAINY 40 25
+- CAR ORBIT2
+
+------------------------------------------------------------
+
+Orbits - 2
+Vehicles - 3
+
+Goal - choose the fastest way
+
+Orbit 1
+Distance : 18 mm
+No. of creators : 20
+
+Orbit 2
+Distance : 20 mm
+No. of creators : 10
+
+Vehicles :
+Bike -
+Speed : 10mm/h
+Take : 2 minutes to cross creator
+Can travel when : sunny/windy
+
+TUK TUK -
+Speed : 12mm/h
+Take : 1 minutes to cross creator
+Can travel when : sunny/rainy
+
+Super car -
+Speed : 20mm/h
+Take : 3 minutes to cross creator
+Can travel when : sunny/rainy/windy
+
+Potential weather :
+Sunny
+Rainy
+Windy
+------------------------------------------------------------
