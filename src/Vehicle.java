@@ -3,16 +3,16 @@ import java.util.List;
 public abstract class Vehicle {
     double speed;
     double cratersCrossTime;
-    List<WeatherType> weatherTypes;
+    List<Weather> weathers;
 
-    public Vehicle(double speed, double cratersCrossTime, List<WeatherType> weatherTypes) {
+    public Vehicle(double speed, double cratersCrossTime, List<Weather> weathers) {
         this.speed = speed;
         this.cratersCrossTime = cratersCrossTime;
-        this.weatherTypes = weatherTypes;
+        this.weathers = weathers;
     }
 
-    public boolean canTravelIn(WeatherType weatherType) {
-        return this.weatherTypes.contains(weatherType);
+    public boolean canTravelIn(Weather weather) {
+        return this.weathers.contains(weather);
     }
 
     public double calculateCratersCrossTime(int numberOfCreator) {
