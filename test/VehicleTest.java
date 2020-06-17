@@ -57,7 +57,7 @@ class VehicleTest {
         List<Weather> weatherTypes = Arrays.asList(Weather.WINDY, Weather.SUNNY, Weather.RAINY);
         MockVehicle mockVehicle = new MockVehicle(20, 3, weatherTypes);
 
-        Orbit orbit = new Orbit(20, 1, 40);
+        Orbit orbit = new Orbit(20, 1, 40, "ORBIT1");
         Weather sunny = Weather.SUNNY;
 
         double result = mockVehicle.calculateTotalTravelTime(orbit,sunny);

@@ -3,9 +3,13 @@ import java.util.List;
 import java.util.stream.Stream;
 
 public class Scorer {
-    public String getWinner(Orbit orbit, List<Vehicle> vehicles, Weather weather) {
+    public TravelRecord getWinnerForOrbit(Orbit orbit, List<Vehicle> vehicles, Weather weather) {
         Stream<TravelRecord> travelRecords = vehicles.stream().map(vehicle -> vehicle.getTravelRecord(orbit, weather));
-        TravelRecord winnerRecord = travelRecords.min(Comparator.comparingDouble(TravelRecord::getTravelTime)).get();
-        return winnerRecord.getVehicleName();
+        return travelRecords.min(Comparator.comparingDouble(TravelRecord::getTravelTime)).get();
+    }
+
+    public String getWinner(List<Orbit> orbits, List<Vehicle> vehicles, Weather weather){
+        TravelRecord travelRecord = orbits.stream().map(orbit -> getWinnerForOrbit(orbit, vehicles, weather)).min(Comparator.comparingDouble(TravelRecord::getTravelTime)).get();
+        return travelRecord.getVehicleName() + "-->" + travelRecord.getOrbitName();
     }
 }

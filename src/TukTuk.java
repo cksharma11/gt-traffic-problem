@@ -7,6 +7,6 @@ public class TukTuk extends Vehicle {
 
     @Override
     public TravelRecord getTravelRecord(Orbit orbit, Weather weather) {
-        return new TravelRecord("TukTuk", this.calculateTotalTravelTime(orbit, weather));
+        return new TravelRecord("TukTuk", this.calculateTotalTravelTime(orbit, weather), orbit.getName());
     }
 }
