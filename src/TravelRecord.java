@@ -32,9 +32,4 @@ public class TravelRecord {
                 Objects.equals(vehicleName, record.vehicleName) &&
                 Objects.equals(orbitName, record.orbitName);
     }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(vehicleName, travelTime, orbitName);
-    }
 }
