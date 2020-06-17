@@ -5,7 +5,7 @@ plugins {
 group = 'com.traffic'
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
-
+sourceSets.main.java.srcDirs = ['src']
 
 jar {
     archiveBaseName = 'geektrust' //Please do not change this final artifact name
@@ -13,7 +13,10 @@ jar {
     version = null   //Please do not change this final artifact version
 
     manifest {
-        attributes 'Main' : 'com.traffic.Main'
+        attributes(
+                'Class-Path': configurations.compile.collect { it.getName() }.join(' '),
+                'Main-Class': 'com.traffic.Main'
+        )
     }
     // To create a single jar with all dependencies.
     from {
