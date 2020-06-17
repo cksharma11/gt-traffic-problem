@@ -14,7 +14,7 @@ class CarTest {
         Orbit orbit = new Orbit(20, 10, 15, "ORBIT1");
         TravelRecord record = car.getTravelRecord(orbit, Weather.SUNNY);
 
-        TravelRecord expected = new TravelRecord("Car", 2.15, "ORBIT1");
+        TravelRecord expected = new TravelRecord("Car", 129.0, "ORBIT1");
         assertEquals(record, expected);
     }
 }

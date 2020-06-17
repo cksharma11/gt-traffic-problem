@@ -10,7 +10,7 @@ public class Scorer {
         return travelRecords.min(Comparator.comparingDouble(TravelRecord::getTravelTime)).get();
     }
 
-    public String getWinner(List<Orbit> orbits, List<Vehicle> vehicles, Weather weather){
+    public String getWinner(List<Orbit> orbits, List<Vehicle> vehicles, Weather weather) {
         Stream<TravelRecord> recordStream = orbits.stream().map(orbit -> getWinnerForOrbit(orbit, vehicles, weather));
         TravelRecord travelRecord = recordStream.min(Comparator.comparingDouble(TravelRecord::getTravelTime)).get();
         return travelRecord.getVehicleName() + " " + travelRecord.getOrbitName();

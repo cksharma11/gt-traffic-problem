@@ -1,5 +1,7 @@
 package com.traffic;
 
+import java.math.RoundingMode;
+import java.text.DecimalFormat;
 import java.util.List;
 
 public abstract class Vehicle {
@@ -31,8 +33,8 @@ public abstract class Vehicle {
         double craterCount = weather.reducedCraterCount(orbit.getNumberOfCreators());
         double travelSpeed = this.maxTravelSpeed(orbit.getSpeedLimit());
 
-        double cratersTime = this.calculateCratersCrossTime(craterCount) / 60;
-        double travelTime = orbit.getDistance() / travelSpeed;
+        double cratersTime = this.calculateCratersCrossTime(craterCount);
+        double travelTime = (orbit.getDistance() / travelSpeed) * 60;
 
         return cratersTime + travelTime;
     }

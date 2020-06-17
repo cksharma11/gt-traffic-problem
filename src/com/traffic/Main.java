@@ -11,7 +11,7 @@ public class Main {
         ParsedInput parsedInput = parser.parseInput(filePath);
 
         Orbit orbit1 = new Orbit(18, 20, parsedInput.getOrbit1SpeedLimit(), "ORBIT1");
-        Orbit orbit2 = new Orbit(10, 0, parsedInput.getOrbit2SpeedLimit(), "ORBIT2");
+        Orbit orbit2 = new Orbit(20, 10, parsedInput.getOrbit2SpeedLimit(), "ORBIT2");
         List<Orbit> orbits = Arrays.asList(orbit1, orbit2);
 
         Car car = new Car(20, 3, Arrays.asList(Weather.RAINY, Weather.WINDY, Weather.SUNNY));

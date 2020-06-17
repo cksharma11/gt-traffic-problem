@@ -3,7 +3,7 @@ package com.traffic;
 public enum Weather {
     SUNNY(10),
     WINDY(0),
-    RAINY(20);
+    RAINY(-20);
 
     double craterReducePercentage;
 

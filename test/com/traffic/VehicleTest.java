@@ -63,6 +63,6 @@ class VehicleTest {
         Weather sunny = Weather.SUNNY;
 
         double result = mockVehicle.calculateTotalTravelTime(orbit,sunny);
-        assertEquals(1.045, result);
+        assertEquals(62.7, result);
     }
 }
