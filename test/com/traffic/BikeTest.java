@@ -13,7 +13,7 @@ class BikeTest {
         Orbit orbit = new Orbit(20, 10, 15, "ORBIT1");
         TravelRecord record = bike.getTravelRecord(orbit, Weather.SUNNY);
 
-        TravelRecord expected = new TravelRecord("com.mission_impossible.Bike", 2.15, "ORBIT1");
+        TravelRecord expected = new TravelRecord("Bike", 2.15, "ORBIT1");
         assertEquals(record, expected);
     }
 }

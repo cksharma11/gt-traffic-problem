@@ -1,5 +1,7 @@
 package com.traffic;
 
+import java.util.Objects;
+
 public class ParsedInput {
     private final int orbit1SpeedLimit;
     private final int orbit2SpeedLimit;
@@ -21,5 +23,15 @@ public class ParsedInput {
 
     public String getWeatherString() {
         return weatherString;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof ParsedInput)) return false;
+        ParsedInput that = (ParsedInput) o;
+        return orbit1SpeedLimit == that.orbit1SpeedLimit &&
+                orbit2SpeedLimit == that.orbit2SpeedLimit &&
+                Objects.equals(weatherString, that.weatherString);
     }
 }
