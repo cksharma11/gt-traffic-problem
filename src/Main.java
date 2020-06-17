@@ -3,7 +3,6 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        // RAINY 40 20
         Orbit orbit1 = new Orbit(18, 20, Integer.parseInt(args[1]), "ORBIT1");
         Orbit orbit2 = new Orbit(10, 0, Integer.parseInt(args[2]), "ORBIT2");
         List<Orbit> orbits = Arrays.asList(orbit1, orbit2);
