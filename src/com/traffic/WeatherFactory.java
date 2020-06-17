@@ -1,7 +1,7 @@
 package com.traffic;
 
 public class WeatherFactory {
-    public Weather getWeather(String weather){
+    public Weather getWeather(String weather) {
         switch (weather.toLowerCase()) {
             case "rainy":
                 return Weather.RAINY;

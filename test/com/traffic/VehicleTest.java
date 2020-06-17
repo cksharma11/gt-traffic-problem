@@ -62,7 +62,7 @@ class VehicleTest {
         Orbit orbit = new Orbit(20, 1, 40, "ORBIT1");
         Weather sunny = Weather.SUNNY;
 
-        double result = mockVehicle.calculateTotalTravelTime(orbit,sunny);
+        double result = mockVehicle.calculateTotalTravelTime(orbit, sunny);
         assertEquals(62.7, result);
     }
 }

@@ -1,6 +1,9 @@
 package com.traffic;
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
 
 public class Parser {
     public ParsedInput parseInput(String filePath) throws IOException {
