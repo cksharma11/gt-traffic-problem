@@ -15,7 +15,7 @@ public abstract class Vehicle {
         return this.weathers.contains(weather);
     }
 
-    public double calculateCratersCrossTime(int numberOfCreator) {
+    public double calculateCratersCrossTime(double numberOfCreator) {
         return this.cratersCrossTime * numberOfCreator;
     }
 
@@ -23,22 +23,17 @@ public abstract class Vehicle {
         return Math.min(this.speed, speedLimit);
     }
 
-    private double getCratersTime(double count) {
-        double minutes =  count * this.cratersCrossTime;
-        return minutes / 60;
-    }
-
-    private double getTravelTime(double distance, double speed) {
-        return distance / speed;
-    }
-
     public double calculateTotalTravelTime(Orbit orbit, Weather weather) {
+        if (!this.canTravelIn(weather)) return Double.POSITIVE_INFINITY;
+
         double craterCount = weather.reducedCraterCount(orbit.getNumberOfCreators());
         double travelSpeed = this.maxTravelSpeed(orbit.getSpeedLimit());
 
-        double cratersTime = this.getCratersTime(craterCount);
-        double travelTime = this.getTravelTime(orbit.getDistance(), travelSpeed);
+        double cratersTime = this.calculateCratersCrossTime(craterCount) / 60;
+        double travelTime = orbit.getDistance() / travelSpeed;
 
         return cratersTime + travelTime;
     }
+
+    public abstract TravelRecord getTravelRecord(Orbit orbit, Weather weather);
 }

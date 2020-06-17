@@ -7,7 +7,7 @@ Bike -   10 megamiles/hour  & takes 2 min to cross 1 crater & Can travel when : 
 Tuktuk - 12 mm/hour         & takes 1 min to cross 1 crater & Can travel when : sunny/rainy
 Car -    20 mm/hour         & takes 3 min to cross 1 crater & Can travel when : sunny/rainy/windy
 
-WeatherType conditions (affects the number of craters in an orbit):
+Weather conditions (affects the number of craters in an orbit):
 Sunny - craters reduce by 10%. Car, bike and tuktuk can be used in this weatherType.
 Rainy - craters increase by 20%. Car and tuktuk can be used in this weatherType.
 Windy - no change to number of craters. Car and bike can be used in this weatherType.

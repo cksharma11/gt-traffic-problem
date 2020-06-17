@@ -9,6 +9,11 @@ class MockVehicle extends Vehicle {
     public MockVehicle(double speed, double creatorCrossTime, List<Weather> weathers) {
         super(speed, creatorCrossTime, weathers);
     }
+
+    @Override
+    public TravelRecord getTravelRecord(Orbit orbit, Weather weather) {
+        return null;
+    }
 }
 
 class VehicleTest {
