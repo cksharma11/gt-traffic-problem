@@ -25,7 +25,7 @@ class ScorerTest {
         Scorer scorer = new Scorer();
         TravelRecord record = scorer.getWinnerForOrbit(orbit1, vehicles, weatherFactory.getWeather("rainy"));
         System.out.println(record.getTravelTime());
-        TravelRecord expected = new TravelRecord("com.mission_impossible.Car", 1.0, "ORBIT1");
+        TravelRecord expected = new TravelRecord("Car", 1.0, "ORBIT1");
         assertEquals(expected, record);
     }
 
@@ -34,6 +34,6 @@ class ScorerTest {
         Scorer scorer = new Scorer();
         String record = scorer.getWinner(orbits, vehicles, weatherFactory.getWeather("rainy"));
 
-        assertEquals("com.mission_impossible.Car ORBIT2", record);
+        assertEquals("Car ORBIT2", record);
     }
 }

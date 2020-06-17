@@ -9,6 +9,6 @@ public class Car extends Vehicle {
 
     @Override
     public TravelRecord getTravelRecord(Orbit orbit, Weather weather) {
-        return new TravelRecord("com.mission_impossible.Car", this.calculateTotalTravelTime(orbit, weather), orbit.getName());
+        return new TravelRecord("Car", this.calculateTotalTravelTime(orbit, weather), orbit.getName());
     }
 }
