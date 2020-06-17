@@ -3,8 +3,9 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        Orbit orbit1 = new Orbit(18, 20, 15, "ORBIT1");
-        Orbit orbit2 = new Orbit(10, 0, 30, "ORBIT2");
+        // RAINY 40 20
+        Orbit orbit1 = new Orbit(18, 20, Integer.parseInt(args[1]), "ORBIT1");
+        Orbit orbit2 = new Orbit(10, 0, Integer.parseInt(args[2]), "ORBIT2");
         List<Orbit> orbits = Arrays.asList(orbit1, orbit2);
 
         Car car = new Car(20, 3, Arrays.asList(Weather.RAINY, Weather.WINDY, Weather.SUNNY));
@@ -16,7 +17,9 @@ public class Main {
 
         Scorer scorer = new Scorer();
 
-        String winner = scorer.getWinner(orbits, vehicles, weatherFactory.getWeather("rainy"));
+        Weather weather = weatherFactory.getWeather(args[0]);
+
+        String winner = scorer.getWinner(orbits, vehicles, weather);
         System.out.println(winner);
     }
 }
