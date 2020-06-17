@@ -1,3 +1,5 @@
+package com.traffic;
+
 import java.util.List;
 
 public abstract class Vehicle {

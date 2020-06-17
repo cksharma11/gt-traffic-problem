@@ -1,3 +1,5 @@
+package com.traffic;
+
 public class Orbit {
     private final String name;
     private double distance;

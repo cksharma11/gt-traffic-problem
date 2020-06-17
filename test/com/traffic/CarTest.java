@@ -1,7 +1,8 @@
+package com.traffic;
+
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
-import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -13,7 +14,7 @@ class CarTest {
         Orbit orbit = new Orbit(20, 10, 15, "ORBIT1");
         TravelRecord record = car.getTravelRecord(orbit, Weather.SUNNY);
 
-        TravelRecord expected = new TravelRecord("Car", 2.15, "ORBIT1");
+        TravelRecord expected = new TravelRecord("com.mission_impossible.Car", 2.15, "ORBIT1");
         assertEquals(record, expected);
     }
 }

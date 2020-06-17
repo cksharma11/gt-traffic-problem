@@ -1,3 +1,5 @@
+package com.traffic;
+
 import java.util.List;
 
 public class TukTuk extends Vehicle {
@@ -7,6 +9,6 @@ public class TukTuk extends Vehicle {
 
     @Override
     public TravelRecord getTravelRecord(Orbit orbit, Weather weather) {
-        return new TravelRecord("TukTuk", this.calculateTotalTravelTime(orbit, weather), orbit.getName());
+        return new TravelRecord("com.mission_impossible.TukTuk", this.calculateTotalTravelTime(orbit, weather), orbit.getName());
     }
 }

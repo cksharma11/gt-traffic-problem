@@ -1,3 +1,5 @@
+package com.traffic;
+
 public enum Weather {
     SUNNY(10),
     WINDY(0),

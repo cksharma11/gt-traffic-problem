@@ -1,3 +1,5 @@
+package com.traffic;
+
 import java.util.List;
 
 public class Bike extends Vehicle {
@@ -7,6 +9,6 @@ public class Bike extends Vehicle {
 
     @Override
     public TravelRecord getTravelRecord(Orbit orbit, Weather weather) {
-        return new TravelRecord("Bike", this.calculateTotalTravelTime(orbit, weather), orbit.getName());
+        return new TravelRecord("com.mission_impossible.Bike", this.calculateTotalTravelTime(orbit, weather), orbit.getName());
     }
 }

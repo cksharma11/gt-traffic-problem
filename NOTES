@@ -1,16 +1,16 @@
-Orbit options:
-Orbit 1 - 18 mega miles & 20 craters to cross
-Orbit 2 - 20 mega miles & 10 craters to cross
+com.mission_impossible.Orbit options:
+com.mission_impossible.Orbit 1 - 18 mega miles & 20 craters to cross
+com.mission_impossible.Orbit 2 - 20 mega miles & 10 craters to cross
 
-Vehicle options:
-Bike -   10 megamiles/hour  & takes 2 min to cross 1 crater & Can travel when : sunny/windy
+com.mission_impossible.Vehicle options:
+com.mission_impossible.Bike -   10 megamiles/hour  & takes 2 min to cross 1 crater & Can travel when : sunny/windy
 Tuktuk - 12 mm/hour         & takes 1 min to cross 1 crater & Can travel when : sunny/rainy
-Car -    20 mm/hour         & takes 3 min to cross 1 crater & Can travel when : sunny/rainy/windy
+com.mission_impossible.Car -    20 mm/hour         & takes 3 min to cross 1 crater & Can travel when : sunny/rainy/windy
 
-Weather conditions (affects the number of craters in an orbit):
-Sunny - craters reduce by 10%. Car, bike and tuktuk can be used in this weatherType.
-Rainy - craters increase by 20%. Car and tuktuk can be used in this weatherType.
-Windy - no change to number of craters. Car and bike can be used in this weatherType.
+com.mission_impossible.Weather conditions (affects the number of craters in an orbit):
+Sunny - craters reduce by 10%. com.mission_impossible.Car, bike and tuktuk can be used in this weatherType.
+Rainy - craters increase by 20%. com.mission_impossible.Car and tuktuk can be used in this weatherType.
+Windy - no change to number of craters. com.mission_impossible.Car and bike can be used in this weatherType.
 
 - RAINY 40 25
 - CAR ORBIT2
@@ -22,16 +22,16 @@ Vehicles - 3
 
 Goal - choose the fastest way
 
-Orbit 1
+com.mission_impossible.Orbit 1
 Distance : 18 mm
 No. of creators : 20
 
-Orbit 2
+com.mission_impossible.Orbit 2
 Distance : 20 mm
 No. of creators : 10
 
 Vehicles :
-Bike -
+com.mission_impossible.Bike -
 Speed : 10mm/h
 Take : 2 minutes to cross creator
 Can travel when : sunny/windy

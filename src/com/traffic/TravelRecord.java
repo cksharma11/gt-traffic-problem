@@ -1,3 +1,5 @@
+package com.traffic;
+
 import java.util.Objects;
 
 public class TravelRecord {
