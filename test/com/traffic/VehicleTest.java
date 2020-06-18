@@ -20,42 +20,39 @@ class MockVehicle extends Vehicle {
 
 class VehicleTest {
     @Test
-    void ShouldReturnTrueIfCanTravelInWeather() {
+    void ShouldReturnTrueIfCanTravelInSUNNYWeather() {
         List<Weather> weatherTypes = Arrays.asList(Weather.WINDY, Weather.SUNNY);
         MockVehicle mockVehicle = new MockVehicle(20, 3, weatherTypes);
 
-        assertTrue(mockVehicle.canTravelIn(Weather.WINDY));
         assertTrue(mockVehicle.canTravelIn(Weather.SUNNY));
     }
 
     @Test
-    void ShouldReturnFalseIfCannotTravelInWeather() {
-        List<Weather> weatherTypes = Arrays.asList(Weather.WINDY, Weather.SUNNY);
+    void ShouldReturnFalseIfCannotTravelInSUNNYWeather() {
+        List<Weather> weatherTypes = Arrays.asList(Weather.WINDY, Weather.RAINY);
         MockVehicle mockVehicle = new MockVehicle(20, 3, weatherTypes);
 
-        assertFalse(mockVehicle.canTravelIn(Weather.RAINY));
+        assertFalse(mockVehicle.canTravelIn(Weather.SUNNY));
     }
 
     @Test
-    void shouldReturnTimeItWillTakeToCrossNNumbersCreators() {
+    void shouldReturnTimeTakenToCross2Craters() {
         List<Weather> weatherTypes = Arrays.asList(Weather.WINDY, Weather.SUNNY, Weather.RAINY);
         MockVehicle mockVehicle = new MockVehicle(20, 3, weatherTypes);
 
-        assertEquals(3, mockVehicle.calculateCratersCrossTime(1));
         assertEquals(6, mockVehicle.calculateCratersCrossTime(2));
     }
 
     @Test
-    void shouldReturnMaxSpeedCanTravelGivenOrbitsSpeedLimit() {
+    void shouldReturnMaximumTravelSpeedForOrbitGivenSpeedLimit() {
         List<Weather> weatherTypes = Arrays.asList(Weather.WINDY, Weather.SUNNY, Weather.RAINY);
         MockVehicle mockVehicle = new MockVehicle(20, 3, weatherTypes);
 
-        assertEquals(20, mockVehicle.maxTravelSpeed(25));
         assertEquals(12, mockVehicle.maxTravelSpeed(12));
     }
 
     @Test
-    void shouldReturnTimeTakenToTravelToOrbitInHours() {
+    void shouldReturnTimeTakenForTravelingToOrbit() {
         List<Weather> weatherTypes = Arrays.asList(Weather.WINDY, Weather.SUNNY, Weather.RAINY);
         MockVehicle mockVehicle = new MockVehicle(20, 3, weatherTypes);
 

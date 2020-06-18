@@ -7,3 +7,8 @@ out/
 # Ignore Gradle build output directory
 build
 gradle/
+.classpath
+.project
+.settings/
+bin/
+.DS_STORE

@@ -26,7 +26,7 @@ class ParserTest {
     }
 
     @Test
-    void shouldReadFileAndParseInputFile() throws IOException {
+    void shouldReturnParsedOInput() throws IOException {
         Parser parser = new Parser();
         ParsedInput actual = parser.parseInput("testInput");
 

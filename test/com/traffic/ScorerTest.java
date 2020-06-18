@@ -21,7 +21,7 @@ class ScorerTest {
 
 
     @Test
-    void shouldReturnMinTravelTimeRecord() {
+    void shouldReturnMinimumTimeRecord() {
         Scorer scorer = new Scorer();
         TravelRecord record = scorer.getWinnerForOrbit(orbit1, vehicles, weatherFactory.getWeather("rainy"));
 
@@ -30,7 +30,7 @@ class ScorerTest {
     }
 
     @Test
-    void shouldReturnOverallWinner1() {
+    void shouldReturnMessageWithVehicleAndOrbitNameOfWhichCanBeTraveledInMinimumTimeForRainyWeather() {
         Scorer scorer = new Scorer();
         String record = scorer.getWinner(orbits, vehicles, weatherFactory.getWeather("rainy"));
 
@@ -38,7 +38,7 @@ class ScorerTest {
     }
 
     @Test
-    void shouldReturnOverallWinner2() {
+    void shouldReturnMessageWithVehicleAndOrbitNameOfWhichCanBeTraveledInMinimumTimeForSunnyWeather() {
         Orbit orbit1 = new Orbit(18, 20, 14, "ORBIT1");
         Orbit orbit2 = new Orbit(20, 10, 14, "ORBIT2");
         List<Orbit> orbits = Arrays.asList(orbit1, orbit2);
@@ -56,8 +56,8 @@ class ScorerTest {
         List<Orbit> orbits = Arrays.asList(orbit1, orbit2);
 
         Scorer scorer = new Scorer();
-        String record = scorer.getWinner(orbits, vehicles, weatherFactory.getWeather("rainy"));
+        String record = scorer.getWinner(orbits, vehicles, weatherFactory.getWeather("windy"));
 
-        assertEquals("TukTuk ORBIT2", record);
+        assertEquals("Car ORBIT1", record);
     }
 }

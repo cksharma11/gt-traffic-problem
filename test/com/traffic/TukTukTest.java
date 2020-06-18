@@ -8,7 +8,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class TukTukTest {
     @Test
-    void shouldGetTravelRecord() {
+    void shouldGetTravelRecordForTukTuk() {
         TukTuk tukTuk = new TukTuk(10, 1, Arrays.asList(Weather.SUNNY, Weather.WINDY));
         Orbit orbit = new Orbit(20, 10, 15, "ORBIT1");
         TravelRecord record = tukTuk.getTravelRecord(orbit, Weather.SUNNY);
